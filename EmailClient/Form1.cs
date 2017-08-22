@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+using EmailClient.POP3;
+
+
 namespace EmailClient
 {
     public partial class Form1 : Form
@@ -26,12 +29,6 @@ namespace EmailClient
         {
             InitializeComponent();
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
-            SetStyle(
-                ControlStyles.AllPaintingInWmPaint |
-                ControlStyles.UserPaint | 
-                ControlStyles.OptimizedDoubleBuffer | 
-                ControlStyles.ResizeRedraw, true);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -61,11 +58,9 @@ namespace EmailClient
             this.WindowState = FormWindowState.Minimized;
         }
 
-        protected override void OnPaint(PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            base.OnPaint(e);
 
-            e.Graphics.DrawRectangle(Pens.Black, this.Bounds);
         }
     }
 }

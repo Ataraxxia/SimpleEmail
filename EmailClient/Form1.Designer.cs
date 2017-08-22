@@ -38,15 +38,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.MessagesListPanel = new System.Windows.Forms.Panel();
             this.MessagePanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.InfoPanel = new System.Windows.Forms.Panel();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.MailboxesPanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.InfoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MailboxesPanel
             // 
             this.MailboxesPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(54)))), ((int)(((byte)(85)))));
+            this.MailboxesPanel.Controls.Add(this.InfoPanel);
             this.MailboxesPanel.Controls.Add(this.LogoPanel);
             this.MailboxesPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MailboxesPanel.Location = new System.Drawing.Point(0, 0);
@@ -78,6 +83,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(101)))), ((int)(((byte)(141)))));
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -152,6 +158,34 @@
             this.MessagePanel.Size = new System.Drawing.Size(387, 350);
             this.MessagePanel.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(61, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Pobierz";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // InfoPanel
+            // 
+            this.InfoPanel.Controls.Add(this.statusLabel);
+            this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.InfoPanel.Location = new System.Drawing.Point(0, 372);
+            this.InfoPanel.Name = "InfoPanel";
+            this.InfoPanel.Size = new System.Drawing.Size(200, 31);
+            this.InfoPanel.TabIndex = 1;
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(12, 9);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(35, 13);
+            this.statusLabel.TabIndex = 0;
+            this.statusLabel.Text = "label5";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,6 +204,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.InfoPanel.ResumeLayout(false);
+            this.InfoPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -185,6 +221,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel MessagePanel;
         private System.Windows.Forms.Panel MessagesListPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel InfoPanel;
+        private System.Windows.Forms.Label statusLabel;
     }
 }
 
