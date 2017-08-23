@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
-using EmailClient.POP3;
-
+using System.Collections.Generic;
 
 namespace EmailClient
 {
@@ -60,7 +52,14 @@ namespace EmailClient
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
+            List<OpenPop.Mime.Message> lMessages = POP3.POPProtocol.fetchAllMessages();
 
+            for(int i = 0; i < lMessages.Count; i++)
+            {
+                flowLayoutPanel1.Controls.Add(new MessageListItem(lMessages[i].Headers.From.ToString(), lMessages[i].Headers.Subject));
+            }
+            */
         }
     }
 }
